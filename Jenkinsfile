@@ -53,7 +53,7 @@ pipeline {
 
                 attachLog:true,
                 compressLog:true,
-                attachmentsPattern:'hook_test/*.txt',
+                attachmentsPattern:'hook_test/*',
                 ) 
         }
     }
