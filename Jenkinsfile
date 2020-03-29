@@ -16,6 +16,17 @@ pipeline {
         }
         stage("Disp ENV"){
             steps{
+                echo "${env.BRANCH_NAME}"
+                echo "${env.CHANGE_ID}"
+                echo "${env.CHANGE_URL}"
+                echo "${env.CHANGE_TITLE}"
+                echo "${env.CHANGE_AUTHOR}"
+                echo "${env.CHANGE_AUTHOR_DISPLAY_NAME}"
+                echo "${env.CHANGE_AUTHOR_EMAIL}"
+                echo "${env.CHANGE_TARGET}"
+                echo "${env.CHANGE_BRANCH}"
+                echo "${env.CHANGE_FORK}"
+
                 echo "BUILD_NUMBER:           ${env.BUILD_NUMBER}"
                 echo "BUILD_ID:           ${env.BUILD_ID}"
                 echo "BUILD_DISPLAY_NAME:           ${env.BUILD_DISPLAY_NAME}"
