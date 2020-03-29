@@ -52,7 +52,7 @@ pipeline {
 
                 attachLog:true,
                 compressLog:false,
-                attachmentsPattern:"*"
+                attachmentsPattern:'*',
                 ) 
         }
     }
