@@ -16,17 +16,7 @@ pipeline {
         }
         stage("Disp ENV"){
             steps{
-                echo "${BRANCH_NAME}"
-                echo "${CHANGE_ID}"
-                echo "${CHANGE_URL}"
-                echo "${CHANGE_TITLE}"
-                echo "${CHANGE_AUTHOR}"
-                echo "${CHANGE_AUTHOR_DISPLAY_NAME}"
-                echo "${CHANGE_AUTHOR_EMAIL}"
-                echo "${CHANGE_TARGET}"
-                echo "${CHANGE_BRANCH}"
-                echo "${CHANGE_FORK}"
-                echo "msg: ${GIT_COMMIT}"
+                echo "${GIT_COMMIT}"
 
                 echo "BUILD_NUMBER:           ${env.BUILD_NUMBER}"
                 echo "BUILD_ID:           ${env.BUILD_ID}"
