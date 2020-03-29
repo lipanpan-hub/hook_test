@@ -16,35 +16,24 @@ pipeline {
         }
         stage("Disp ENV"){
             steps{
-                echo "${env.BRANCH_NAME}"
-                echo "${env.CHANGE_ID}"
-                echo "${env.CHANGE_URL}"
-                echo "${env.CHANGE_TITLE}"
-                echo "${env.CHANGE_AUTHOR}"
-                echo "${env.CHANGE_AUTHOR_DISPLAY_NAME}"
-                echo "${env.CHANGE_AUTHOR_EMAIL}"
-                echo "${env.CHANGE_TARGET}"
-                echo "${env.CHANGE_BRANCH}"
-                echo "${env.CHANGE_FORK}"
+                echo "BUILD_NUMBER:           ${env.BUILD_NUMBER}"
+                echo "BUILD_ID:           ${env.BUILD_ID}"
+                echo "BUILD_DISPLAY_NAME:           ${env.BUILD_DISPLAY_NAME}"
+                echo "BUILD_URL:           ${env.BUILD_URL}"
+                echo "BUILD_TAG:           ${env.BUILD_TAG}"
 
-                echo "${env.BUILD_NUMBER}"
-                echo "${env.BUILD_ID}"
-                echo "${env.BUILD_DISPLAY_NAME}"
-                echo "${env.BUILD_URL}"
-                echo "${env.BUILD_TAG}"
+                echo "JOB_NAME:           ${env.JOB_NAME}"
+                echo "JOB_BASE_NAME:           ${env.JOB_BASE_NAME}"
+                echo "JOB_URL:           ${env.JOB_URL}"
 
-                echo "${env.JOB_NAME}"
-                echo "${env.JOB_BASE_NAME}"
-                echo "${env.JOB_URL}"
+                echo "EXECUTOR_NUMBER:           ${env.EXECUTOR_NUMBER}"
+                echo "NODE_NAME:           ${env.NODE_NAME}"
+                echo "NODE_LABELS:           ${env.NODE_LABELS}"
+                echo "WORKSPACE:           ${env.WORKSPACE}"
 
-                echo "${env.EXECUTOR_NUMBER}"
-                echo "${env.NODE_NAME}"
-                echo "${env.NODE_LABELS}"
-                echo "${env.WORKSPACE}"
-
-                echo "${env.JENKINS_HOME}"
-                echo "${env.JENKINS_URL}"
-            }
+                echo "JENKINS_HOME:           ${env.JENKINS_HOME}"
+                echo "JENKINS_URL:           ${env.JENKINS_URL}"
+                            }
         }
     }
 
@@ -63,7 +52,7 @@ pipeline {
 
                 attachLog:true,
                 compressLog:false,
-                attachmentsPattern:"${env.WORKSPACE}/*.txt"
+                attachmentsPattern:"*"
                 ) 
         }
     }
