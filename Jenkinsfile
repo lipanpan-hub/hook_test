@@ -53,7 +53,7 @@ pipeline {
 
                 attachLog:true,
                 compressLog:true,
-                attachmentsPattern:'hook_test/*','hook_test/新建文件夹/*',
+                attachmentsPattern:'hook_test/*,hook_test/new/*',
                 ) 
         }
     }
