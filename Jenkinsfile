@@ -33,7 +33,7 @@ pipeline {
 
                 echo "JENKINS_HOME:           ${env.JENKINS_HOME}"
                 echo "JENKINS_URL:           ${env.JENKINS_URL}"
-                            }
+            }
         }
     }
 
@@ -45,11 +45,10 @@ pipeline {
                 from:"lipanpanmail@163.com",
                 to:"lipanpanmail@163.com",
                 replyTo:"do-not-reply@dji.com",
-                // body:"${SCRIPT, template='groovy-html.template'}",
-                body:"""
-                ${env.JOB_NAME}
-                """,
-
+                body:'${SCRIPT, template="groovy-html.template"}',
+                // body:"""
+                // ${env.JOB_NAME}
+                // """,
 
                 attachLog:true,
                 compressLog:true,
