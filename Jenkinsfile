@@ -51,8 +51,8 @@ pipeline {
 
 
                 attachLog:true,
-                compressLog:false,
-                attachmentsPattern:'*',
+                compressLog:true,
+                attachmentsPattern:'hook_test*',
                 ) 
         }
     }
