@@ -45,6 +45,7 @@ pipeline {
                 from:"lipanpanmail@163.com",
                 to:"lipanpanmail@163.com",
                 replyTo:"do-not-reply@dji.com",
+                // body:"${SCRIPT, template='groovy-html.template'}",
                 body:"""
                 ${env.JOB_NAME}
                 """,
@@ -52,7 +53,7 @@ pipeline {
 
                 attachLog:true,
                 compressLog:true,
-                attachmentsPattern:'hook_test*',
+                attachmentsPattern:'hook_test/*.txt',
                 ) 
         }
     }
