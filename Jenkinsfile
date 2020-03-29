@@ -19,13 +19,20 @@ pipeline {
     post{
         always{
             emailext(
+                subject:"rmhunter 测试结果报告",
+                mimeType:"text/html",
+                from:"lipanpanmail@163.com",
+                to:"lipanpanmail@163.com",
+                replyTo:"do-not-reply@dji.com",
                 body:"""
                 ${env.JOB_NAME}
                 """,
-                subject:"",
-                to:"lipanpanmail@163.com",
 
-                )
+
+                attachLog:true,
+                compressLog:false,
+
+                ) 
         }
     }
 }
